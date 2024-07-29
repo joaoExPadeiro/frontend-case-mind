@@ -45,6 +45,8 @@ export default function Home() {
         });
 
         if (response.status === 200) {
+          const data = await response.json();
+          console.log(data.userLogin)
           router.push("/pricing");
         } else {
           toast.error("Credenciais inválidas.");
